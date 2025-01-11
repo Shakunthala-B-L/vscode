@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+    .header {
+      background-color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+    }
+    .header .nav {
+      display: flex;
+      gap: 15px;
+    }
+    .header .nav a {
+      text-decoration: none;
+      color: bla;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .header .nav a:hover {
+      color: #ffcc00;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: white;
+      color: black;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+
+    .hero .btn {
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .hero .btn:hover {
+      background-color: blue;
+    }
+   
+    .video-section {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; 
+  background-color: white;
+}
+
+video {
+  max-width: 75%;
+  height: auto; 
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  justify-content: center; 
+}
+
+.btn {
+  margin-top: 15px;
+  background-color: blue;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005f99;
+}
+.ownCss{
+  width: 80%;
+  height: 50%;
+}
+.preCss{
+  width: 100%;
+  height: 50%;
+}
+.perCss{
+  width: 100%;
+  height: 50%;
+}
+    .features {
+      padding: 10px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: white;
+      
+    }
+
+    .feature-card {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .activate {
+      padding: 50px 100px;
+      display: flex;
+      gap: 2px;
+      justify-content: center;
+      background: linear-gradient(90deg, #a292e5, #cccce9, #058ef7);
+      background: white;
+      color: black;
+    }
+    .activepara {
+      
+      color: black;
+      padding: 10px;
+      border-radius: 8px;
+      width: 4000px;
+      text-align: center;
+      background: linear-gradient(90deg, #a292e5, #cccce9, #058ef7);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+     
+    }
+    .activepara h1{
+      text-align: start;
+      font-size: 250%;
+    }
+    .activepara p{
+      text-align: end;
+      
+    }
+    .faster {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+.fasterpara {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    padding: 50px 80px;
+    margin: auto;
+    background-color:white;
+    
+    
+}
+.what{
+  flex: 1; 
+  max-width: 50%; 
+  padding-right: 100px;
+  padding-left: 90px;
+}
+
+.what h2 {
+  font-size: 28px;
+    color: black;
+}
+
+.what p {
+  font-size: 16px;
+    line-height: 1.6;
+    
+    color: black;
+}
+
+.what a {
+  display: inline-block;
+    font-size: 16px;
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.what a:hover {
+    text-decoration: underline;
+}
+.why{
+  flex: 1; 
+    max-width: 50%; 
+    text-align: center;
+    padding-right: 100px;
+}
+.why img{
+  max-width: 100%;
+    height: auto; 
+}
+.with {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    padding: 40px 80px;
+    background-color:white;
+}
+.how {
+    align-content: center;
+    flex: 1; 
+    max-width: 35%; 
+    padding-left: 90px;
+    padding-right: 2%;
+}
+.how h2{
+    font-size: 28px;
+    color:black;
+}
+.how p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+}
+.how a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+.how a:hover {
+    text-decoration: underline;
+}
+.right-panel {
+    flex: 1 ; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 10px;
+    max-width: 65%;
+    padding-right: 100px;
+    background-color: white;
+}
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin: 0;
+    color: black;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: black;
+}
+.cop{
+      margin-top: 15px;
+      background-color: whitesmoke;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+}
+
+.cop:hover {
+  background-color: #005f99;
+}
+    
+    /* Footer Section */
+    .footer {
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #a6a6a6;
+    }
+
+    .footer a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Visual Studio Code</div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#community">Community</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1> Your Code Editor.</h1> 
+    <h1>Redefined with AI.</h1>
+    <p>Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS, and Linux.</p>
+    <button class="btn">Download for Free</button>
+    <button class="btn">Get copilot Free</button>
+  </section>
+  <section class="video-section">
+    <video id="demoVideo" controls>
+      <source src="video.webm" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+    <br>
+    <button id="videoButton" class="btn">Play</button>
+  </section>
+  <section id="features" class="features">
+    <div class="feature-card">
+      <h3>Choose the model that works for you</h3>
+      <p>Pick the model that works best for your project and team, including GPT 4o and Claude Sonnet.</p>
+      <img src="choose.png" alt="" class="ownCss">
+    </div>
+    <div class="feature-card">
+      <h3>An expert on your codebase</h3>
+      <p>Copilot locally indexes your codebase to understand what’s relevant and supplements that context to interactions with Copilot.</p><br>
+      <img src="an.png" alt="" class="preCss">
+    </div>
+    <div class="feature-card">
+      <h3>Personalized to your needs</h3>
+      <p>Copilot works the way you do. Customize Copilot's prompts with details about your team's workflows, tools, and projects. </p><br>
+      <img src="per.png" alt="" class="perCss">
+    </div>
+  </section>
+  <section id="activate" class="activate">
+    <div class="activepara">
+      <h1>Activate Copilot Free<br>in Visual Studio Code</h1>
+      <p>No trial. No credit card required. Just your GitHub account. <br><br><button class="cop">Get Copilot Free</button></p>
+    </div>
+  </section>
+  <section id="faster" class="faster">
+    <div class="fasterpara">
+      <div class="what">
+      <h2>Create faster</h2><br>
+      <p>Describe what you want to build in natural language, and Copilot Edits takes care of the rest. Copilot Edits makes changes across files in your codebase with a UI designed for rapid iteration. It's the fastest way to add new functionality to your apps.</p><br>
+      <a href="https://code.visualstudio.com/docs/copilot/copilot-edits">Build with Copilot Edits</a><br><br>
+      <p>Copilot Chat is an expert on your codebase, helping you to answer questions, explain code, and propose fixes. Chat is available wherever you need it - either as a dedicated sidebar panel or directly from within your code so you can stay in context.</p><br>
+       <a href="https://code.visualstudio.com/docs/copilot/getting-started-chat">Get answers from Copilot Chat</a>
+      </div>
+      <div class="why">
+       <img src="cre.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="codeef" class="faster">
+    <div class="fasterpara">
+      <div class="what">
+      <h2>Code efficiently</h2><br>
+      <p>Copilot is your AI pair programmer infused directly into the editor. Just start typing, and Copilot will complete your thought by offering a completion on the current line or (sometimes) a whole new block of code. Just like a coworker, you have the flexibility to accept all, some, or none of Copilot's suggestions. Copilot supports a broad range of languages and frameworks.</p><br>
+      <a href="https://code.visualstudio.com/docs/copilot/ai-powered-suggestions">Pair program with Copilot</a><br><br>
+      </div>
+      <div class="why">
+       <img src="codeef.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="codewi" class="codewi">
+    <div class="with">
+      <div class="how">
+        <h2>Code with Extensions</h2><br>
+        <p>Extensions let you customize VS Code and Copilot with AI-powered features grounded securely in your team's data and workflows. Grab one from the gallery and add it to chat like @azure, or <a href="#">build your own Copilot extension</a> to power your team's unique scenarios.</p>
+      </div>
+      <div class="right-panel">
+        <div class="card">
+           <img src="pyth.png" alt="Python">
+           <div class="card-content">
+            <h3>Python</h3>
+            <p>Adds rich language support for Python</p></div>
+            </div>
+            <div class="card">
+            <img src="stri.png" alt="Stripe">
+            <div class="card-content">
+             <h3>Stripe</h3>
+             <p>Build, test, and use Stripe inside your editor</p>
+            </div>
+            </div>
+            <div class="card">
+            <img src="cimage.png" alt="C/C++">
+            <div class="card-content">
+            <h3>C/C++</h3>
+            <p>Adds rich language support for C/C++</p>
+            </div>
+            </div>
+            <div class="card">
+            <img src="jyp.png" alt="Jupyter">
+            <div class="card-content">
+              <h3>Jupyter</h3>
+            <p>Language support for Jupyter Notebooks</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="gitl.png" alt="GitLens">
+                <div class="card-content">
+                    <h3>GitLens</h3>
+                    <p>Supercharge your Git experience</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="csha.png" alt="C# Dev Kit">
+                <div class="card-content">
+                    <h3>C# Dev Kit</h3>
+                    <p>Powerful tools for your C# environment</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="mong.png" alt="MongoDB">
+                <div class="card-content">
+                    <h3>MongoDB</h3>
+                    <p>Extension for the @MongoDB agent</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="gitc.png" alt="GitHub Copilot for Azure">
+                <div class="card-content">
+                    <h3>GitHub Copilot for Azure</h3>
+                    <p>Streamline the process of developing for Azure</p>
+                </div>
+            </div>
+            <div class="card">
+              <img src="rem.png" alt="Remote Development">
+              <div class="card-content">
+                <h3>Remote Development</h3>
+                <p>Open folders in a container on a remote machine</p>
+            </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2025 Visual Studio Code. All rights reserved. <a href="https://code.visualstudio.com/">Official Website</a></p>
+  </footer>
+  <script>
+    const video = document.getElementById('demoVideo');
+    const button = document.getElementById('videoButton');
+
+    button.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        button.textContent = 'Pause';
+      } else {
+        video.pause();
+        button.textContent = 'Play';
+      }
+    });
+    video.addEventListener('ended', () => {
+      button.textContent = 'Play';
+    });
+  </script>
+</body>
+</html>
